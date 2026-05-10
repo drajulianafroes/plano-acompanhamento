@@ -8,6 +8,7 @@ Aplicativo estatico para calcular planos de acompanhamento com tirzepatida, desp
 - `app.js`: logica da calculadora
 - `styles.css`: estilos
 - `contrato.html`: termo de acompanhamento e consentimento informado
+- `auth.js`: bloqueio simples por senha no navegador
 
 ## Publicacao no GitHub Pages
 
