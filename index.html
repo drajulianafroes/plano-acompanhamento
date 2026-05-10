@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora de Consulta com Tirzepatida</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="calculator">
+        <div class="intro">
+          <p class="eyebrow">Calculadora financeira</p>
+          <h1>Plano de acompanhamento</h1>
+          <p>
+            Escolha um plano fechado de tirzepatida e veja a receita, despesas e resultado
+            l&iacute;quido depois do custo da medica&ccedil;&atilde;o, repasse da nutricionista, taxa do
+            cart&atilde;o e impostos.
+          </p>
+          <a class="doc-link" href="contrato.html" target="_blank" rel="noreferrer">
+            Abrir termo para assinatura
+          </a>
+        </div>
+
+        <form class="panel" id="calculatorForm">
+          <div class="section-title">
+            <h2>Plano e repasses</h2>
+            <button class="ghost-button" type="button" id="resetButton">Restaurar</button>
+          </div>
+
+          <label class="field">
+            <span>Repasse para nutricionista</span>
+            <div class="currency-input">
+              <span>R$</span>
+              <input id="nutritionPrice" type="number" min="0" step="0.01" value="200" />
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Desconto para mais de 1 m&ecirc;s</span>
+            <div class="percent-input">
+              <input id="discountRate" type="number" min="0" max="100" step="0.01" value="0" />
+              <span>%</span>
+            </div>
+          </label>
+
+          <div class="section-title">
+            <h2>Despesas percentuais</h2>
+          </div>
+
+          <label class="field">
+            <span>Taxa do cart&atilde;o de cr&eacute;dito</span>
+            <div class="percent-input">
+              <input id="cardFeeRate" type="number" min="0" step="0.01" value="3.34" />
+              <span>%</span>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Impostos</span>
+            <div class="percent-input">
+              <input id="taxRate" type="number" min="0" step="0.01" value="15" />
+              <span>%</span>
+            </div>
+          </label>
+
+          <div class="section-title">
+            <h2>Acompanhamento</h2>
+          </div>
+
+          <label class="field">
+            <span>Dura&ccedil;&atilde;o do acompanhamento</span>
+            <select id="durationSelect">
+              <option value="1" selected>1 m&ecirc;s</option>
+              <option value="2">2 meses</option>
+              <option value="3">3 meses</option>
+              <option value="6">6 meses</option>
+              <option value="12">12 meses</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Nutricionista a cada</span>
+            <select id="nutritionFrequency">
+              <option value="1" selected>1 m&ecirc;s</option>
+              <option value="2">2 meses</option>
+              <option value="3">3 meses</option>
+              <option value="6">6 meses</option>
+            </select>
+          </label>
+
+          <div class="section-title">
+            <h2>Planos m&ecirc;s a m&ecirc;s</h2>
+          </div>
+
+          <div class="month-plans" id="monthPlans"></div>
+        </form>
+
+        <aside class="summary" aria-live="polite">
+          <div>
+            <p class="eyebrow">Valor do pacote</p>
+            <strong id="totalRevenue">R$ 0,00</strong>
+            <span id="totalContext">para 3 meses</span>
+          </div>
+
+          <div class="summary-grid">
+            <div>
+              <span>Receita mensal</span>
+              <strong id="monthlyRevenue">R$ 0,00</strong>
+            </div>
+            <div>
+              <span>Resultado l&iacute;quido</span>
+              <strong id="netResult">R$ 0,00</strong>
+            </div>
+            <div>
+              <span>Despesas totais</span>
+              <strong id="expenseTotal">R$ 0,00</strong>
+            </div>
+            <div>
+              <span>Margem l&iacute;quida</span>
+              <strong id="netMargin">0%</strong>
+            </div>
+          </div>
+
+          <div class="breakdown">
+            <h2>Receitas</h2>
+            <dl>
+              <div>
+                <dt>Planos contratados</dt>
+                <dd id="planRevenueBreakdown">0 x R$ 0,00</dd>
+              </div>
+              <div>
+                <dt>Desconto aplicado</dt>
+                <dd id="discountBreakdown">R$ 0,00</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="breakdown">
+            <h2>Despesas</h2>
+            <dl>
+              <div>
+                <dt>Tirzepatida</dt>
+                <dd id="medicationExpenseBreakdown">R$ 0,00</dd>
+              </div>
+              <div>
+                <dt>Repasse nutri</dt>
+                <dd id="nutritionExpenseBreakdown">R$ 0,00</dd>
+              </div>
+              <div>
+                <dt>Taxa do cart&atilde;o</dt>
+                <dd id="cardFeeBreakdown">R$ 0,00</dd>
+              </div>
+              <div>
+                <dt>Impostos</dt>
+                <dd id="taxBreakdown">R$ 0,00</dd>
+              </div>
+            </dl>
+          </div>
+
+          <p class="note">
+            Os valores dos planos s&atilde;o preestabelecidos e edit&aacute;veis. A tirzepatida
+            exige prescri&ccedil;&atilde;o e acompanhamento profissional.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Termo de Acompanhamento e Consentimento</title>
+    <style>
+      :root {
+        --ink: #18211f;
+        --muted: #5f6f6b;
+        --line: #cfd9d6;
+        --surface: #ffffff;
+        --bg: #eef3f1;
+        --accent: #0f766e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Arial, Helvetica, sans-serif;
+        line-height: 1.55;
+      }
+
+      main {
+        width: min(920px, calc(100% - 28px));
+        margin: 28px auto;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 34px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 1.65rem;
+        line-height: 1.15;
+      }
+
+      h2 {
+        margin: 26px 0 10px;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 6px;
+        color: var(--accent);
+        font-size: 1rem;
+      }
+
+      p {
+        margin: 0 0 10px;
+      }
+
+      ol {
+        margin: 0;
+        padding-left: 22px;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .meta {
+        color: var(--muted);
+        margin-bottom: 22px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 18px;
+      }
+
+      .field {
+        display: grid;
+        gap: 5px;
+      }
+
+      .field span:first-child {
+        color: var(--muted);
+        font-size: 0.86rem;
+      }
+
+      .fill {
+        min-height: 34px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 6px 8px;
+      }
+
+      .full {
+        grid-column: 1 / -1;
+      }
+
+      .note {
+        border-left: 4px solid var(--accent);
+        background: #effaf7;
+        padding: 12px 14px;
+        margin: 16px 0 0;
+      }
+
+      .signatures {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 42px;
+        margin-top: 46px;
+      }
+
+      .signature-line {
+        border-top: 1px solid var(--ink);
+        padding-top: 8px;
+        text-align: center;
+      }
+
+      .toolbar {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 18px;
+      }
+
+      button {
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        background: var(--accent);
+        color: #ffffff;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 700;
+        min-height: 40px;
+        padding: 0 16px;
+      }
+
+      [contenteditable="true"]:focus {
+        outline: 3px solid rgba(15, 118, 110, 0.18);
+        border-color: var(--accent);
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+        }
+
+        main {
+          width: 100%;
+          margin: 0;
+          border: 0;
+          border-radius: 0;
+          padding: 0;
+        }
+
+        .toolbar {
+          display: none;
+        }
+      }
+
+      @media (max-width: 700px) {
+        main {
+          padding: 22px;
+        }
+
+        .grid,
+        .signatures {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="toolbar">
+        <button type="button" onclick="window.print()">Imprimir ou salvar em PDF</button>
+      </div>
+
+      <h1>Termo de acompanhamento terap&ecirc;utico e consentimento informado</h1>
+      <p class="meta">
+        Modelo simples para acompanhamento com tirzepatida. Recomenda-se revis&atilde;o por assessoria
+        jur&iacute;dica antes do uso oficial.
+      </p>
+
+      <h2>1. Identifica&ccedil;&atilde;o</h2>
+      <div class="grid">
+        <label class="field full">
+          <span>Paciente</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>CPF</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>Data de nascimento</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field full">
+          <span>M&eacute;dico(a) respons&aacute;vel</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>CRM/UF</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>Data</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+      </div>
+
+      <h2>2. Objeto</h2>
+      <p>
+        O presente termo registra a ci&ecirc;ncia e concord&acirc;ncia do(a) paciente em realizar
+        acompanhamento terap&ecirc;utico individualizado, conforme avalia&ccedil;&atilde;o cl&iacute;nica,
+        prescri&ccedil;&atilde;o m&eacute;dica e orienta&ccedil;&otilde;es fornecidas em consulta.
+      </p>
+      <p>
+        Quando indicado pelo(a) m&eacute;dico(a), o acompanhamento poder&aacute; incluir plano com
+        tirzepatida, consultas de seguimento e encaminhamento ou acompanhamento nutricional.
+      </p>
+
+      <h2>3. Plano prescrito</h2>
+      <div class="grid">
+        <label class="field">
+          <span>Dose inicial / plano</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>Dura&ccedil;&atilde;o prevista</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field full">
+          <span>Observa&ccedil;&otilde;es da prescri&ccedil;&atilde;o</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+      </div>
+
+      <h2>4. Ci&ecirc;ncia do paciente</h2>
+      <ol>
+        <li>
+          Declaro que recebi explica&ccedil;&otilde;es sobre a indica&ccedil;&atilde;o do tratamento, forma de uso,
+          dose prescrita, dura&ccedil;&atilde;o estimada, necessidade de acompanhamento e possibilidade de
+          ajustes conforme resposta cl&iacute;nica.
+        </li>
+        <li>
+          Fui informado(a) de que a tirzepatida &eacute; medicamento sujeito a prescri&ccedil;&atilde;o e que seu
+          uso deve seguir exatamente a orienta&ccedil;&atilde;o m&eacute;dica, sem aumento, redu&ccedil;&atilde;o,
+          interrup&ccedil;&atilde;o ou compartilhamento com terceiros sem autoriza&ccedil;&atilde;o profissional.
+        </li>
+        <li>
+          Estou ciente de que resultados cl&iacute;nicos e metab&oacute;licos variam entre pessoas e n&atilde;o
+          h&aacute; garantia de perda de peso, melhora de exames ou resultado espec&iacute;fico.
+        </li>
+        <li>
+          Comprometo-me a informar ao(&agrave;) m&eacute;dico(a) doen&ccedil;as pr&eacute;vias, medicamentos em uso,
+          alergias, gravidez, tentativa de engravidar, amamenta&ccedil;&atilde;o, efeitos adversos ou
+          qualquer mudan&ccedil;a relevante no meu estado de sa&uacute;de.
+        </li>
+        <li>
+          Comprometo-me a comparecer aos retornos combinados, realizar exames solicitados quando
+          indicados e seguir as orienta&ccedil;&otilde;es de armazenamento, aplica&ccedil;&atilde;o e descarte do
+          medicamento.
+        </li>
+        <li>
+          Entendo que sintomas intensos, rea&ccedil;&otilde;es al&eacute;rgicas, dor abdominal forte, v&ocirc;mitos
+          persistentes, sinais de desidrata&ccedil;&atilde;o ou qualquer quadro preocupante exigem contato
+          imediato com o servi&ccedil;o m&eacute;dico indicado ou atendimento de urg&ecirc;ncia.
+        </li>
+      </ol>
+
+      <h2>5. Responsabilidades da equipe assistencial</h2>
+      <ol>
+        <li>
+          A equipe compromete-se a realizar avalia&ccedil;&atilde;o cl&iacute;nica, orientar o(a) paciente de forma
+          clara, registrar as condutas pertinentes e acompanhar a evolu&ccedil;&atilde;o conforme crit&eacute;rio
+          profissional.
+        </li>
+        <li>
+          O acompanhamento nutricional, quando inclu&iacute;do, ser&aacute; realizado ou encaminhado conforme
+          organiza&ccedil;&atilde;o do servi&ccedil;o e necessidade do(a) paciente.
+        </li>
+        <li>
+          Este termo n&atilde;o limita direitos do(a) paciente nem exclui responsabilidades profissionais
+          previstas na legisla&ccedil;&atilde;o e nas normas &eacute;ticas aplic&aacute;veis.
+        </li>
+      </ol>
+
+      <h2>6. Valores, pagamentos e cancelamento</h2>
+      <div class="grid">
+        <label class="field">
+          <span>Valor do plano</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field">
+          <span>Forma de pagamento</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+        <label class="field full">
+          <span>Condi&ccedil;&otilde;es de cancelamento, reagendamento ou reembolso</span>
+          <span class="fill" contenteditable="true"></span>
+        </label>
+      </div>
+
+      <h2>7. Privacidade e dados pessoais</h2>
+      <p>
+        O(a) paciente autoriza o tratamento de seus dados pessoais e dados sens&iacute;veis de sa&uacute;de
+        para fins de atendimento, prontu&aacute;rio, prescri&ccedil;&atilde;o, acompanhamento, comunica&ccedil;&atilde;o,
+        cobran&ccedil;a e cumprimento de obriga&ccedil;&otilde;es legais e regulat&oacute;rias, observada a Lei
+        Geral de Prote&ccedil;&atilde;o de Dados.
+      </p>
+
+      <h2>8. Autonomia e consentimento</h2>
+      <p>
+        Declaro que tive oportunidade de fazer perguntas, recebi respostas compreens&iacute;veis e estou
+        assinando este termo de forma livre. Entendo que posso solicitar esclarecimentos, segunda
+        opini&atilde;o ou reavalia&ccedil;&atilde;o do plano a qualquer momento.
+      </p>
+
+      <p class="note">
+        Este termo deve acompanhar, e n&atilde;o substituir, a consulta, o prontu&aacute;rio, a receita
+        m&eacute;dica e eventuais termos espec&iacute;ficos exigidos pelo servi&ccedil;o.
+      </p>
+
+      <div class="signatures">
+        <div class="signature-line">Paciente</div>
+        <div class="signature-line">M&eacute;dico(a) respons&aacute;vel</div>
+      </div>
+    </main>
+  </body>
+</html>
