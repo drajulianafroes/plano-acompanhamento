@@ -98,6 +98,7 @@
   function unlock(screen) {
     sessionStorage.setItem(sessionKey, "true");
     document.documentElement.dataset.authLocked = "false";
+    document.documentElement.classList.remove("auth-pending");
     screen.remove();
   }
 

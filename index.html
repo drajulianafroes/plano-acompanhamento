@@ -1,10 +1,15 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="auth-pending">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Calculadora de Consulta com Tirzepatida</title>
-    <script src="auth.js"></script>
+    <style>
+      html.auth-pending body > *:not(.auth-screen) {
+        visibility: hidden;
+      }
+    </style>
+    <script src="auth.js?v=2"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
